@@ -1,5 +1,9 @@
 syntax = "proto3";
 
+
+// Question: What do I need to import to have User and Pet available here?
+// currently buf generate gives this error: Failure: service.proto exists in multiple locations: service.proto service.proto service.proto
+
 option go_package = "github.com/kostyay/buf-question/buisness/api;api";
 
 package k.buisness;
