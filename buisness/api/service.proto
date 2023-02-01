@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "github.com/kostyay/buf-question/buisness/api;api";
+
+package k.buisness;
+
+// The greeter service definition.
+service Buisness {
+  // Sends a greeting
+  rpc ListOnwersAndPets (ListOwnersAndPetsRequest) returns (ListOwnersAndPetsResponse) {}
+}
+
+message ListOwnersAndPetsRequest {
+}
+
+message CreateOwnerResponse {
+  repeated Owner owners = 1;
+  repeated Pet pets = 1;
+}

@@ -1,0 +1,5 @@
+version: v1
+name: buf.build/kostyay/buisness
+deps:
+  - buf.build/kostyay/owners
+  - buf.build/kostyay/pets

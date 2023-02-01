@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option go_package = "github.com/kostyay/buf-question/users/api;api";
+
+package k.owners;
+
+// The greeter service definition.
+service Owners {
+  // Sends a greeting
+  rpc CreateOwner (CreateOwnerRequest) returns (CreateOwnerResponse) {}
+}
+
+message CreateOwnerRequest {
+  string name = 1;
+  string email = 2;
+}
+
+message CreateOwnerResponse {
+  Owner owner = 1;
+}
+
+message Owner {
+  int32 id = 1;
+  string name = 2;
+  string email = 3;
+}

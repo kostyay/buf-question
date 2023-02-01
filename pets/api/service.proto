@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package k.pets;
+
+option go_package = "github.com/kostyay/buf-question/pets/api;api";
+
+// The greeter service definition.
+service Pets {
+  // Sends a greeting
+  rpc CreatePet (CreatePetRequest) returns (CreatePetResponse) {}
+}
+
+message CreatePetRequest {
+  string name = 1;
+  string type = 2;
+}
+
+message CreatePetResponse {
+  Pet pet = 1;
+}
+
+message Pet {
+  int32 id = 1;
+  string name = 2;
+  string type = 3;
+}
